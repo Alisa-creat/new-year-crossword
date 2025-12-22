@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Колядка и видео</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to bottom, #2c3e50, #1a1a2e);
+      color: white;
+      margin: 0;
+      padding: 20px;
+      text-align: center;
+    }
+    .container {
+      max-width: 700px;
+      margin: 30px auto;
+      background: rgba(0,0,0,0.6);
+      padding: 25px;
+      border-radius: 15px;
+    }
+    h1 {
+      color: #ffcc00;
+      margin-bottom: 25px;
+    }
+    .carol {
+      font-size: 1.25em;
+      line-height: 1.6;
+      margin: 20px 0;
+    }
+    video {
+      max-width: 100%;
+      border-radius: 10px;
+      margin: 20px 0;
+    }
+    .back {
+      display: inline-block;
+      margin-top: 20px;
+      color: #ffcc00;
+      text-decoration: none;
+    }
+    .back:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>🎶 Рождественская колядка</h1>
+    <div class="carol">
+      В лесу родилась ёлочка,<br>
+      В лесу она росла.<br>
+      Зимой и летом стройная,<br>
+      Зелёная была.<br><br>
+      Метель ей пела песенку:<br>
+      «Спи, ёлочка, бай-бай!»<br>
+      Мороз снежком укутывал,<br>
+      Чтоб не замёрзни, засыпай!<br>
+    </div>
+
+    <h2>🎁 Наше рождественское видео</h2>
+    <video controls preload="metadata">
+      <source src="christmas-video.mp4" type="video/mp4">
+      Ваш браузер не поддерживает видео.
+    </video>
+
+    <a href="index.html" class="back">← Вернуться на главную</a>
+  </div>
+</body>
+</html>
