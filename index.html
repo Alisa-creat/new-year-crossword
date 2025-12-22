@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Новогодний кроссворд / New Year Crossword</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background: linear-gradient(to bottom, #1a2980, #26d0ce);
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    h1 {
+      font-size: 2.2em;
+      text-shadow: 1px 1px 3px black;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      background: rgba(0,0,0,0.7);
+      padding: 20px;
+      border-radius: 15px;
+    }
+    table {
+      margin: 20px auto;
+      border-collapse: collapse;
+    }
+    td {
+      width: 40px;
+      height: 40px;
+      border: 2px solid white;
+      text-align: center;
+      vertical-align: middle;
+      font-size: 1.2em;
+      font-weight: bold;
+      background: #f0f0f0;
+      color: #333;
+    }
+    td.black {
+      background: #333;
+      border-color: #333;
+    }
+    input {
+      width: 100%;
+      height: 100%;
+      border: none;
+      background: transparent;
+      text-align: center;
+      font-size: 1.2em;
+      color: #333;
+    }
+    .hints {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+      margin-top: 20px;
+    }
+    .hint-block {
+      background: rgba(255,255,255,0.1);
+      padding: 15px;
+      border-radius: 10px;
+      text-align: left;
+    }
+    .hint-block h3 {
+      margin-top: 0;
+      color: #ffd700;
+    }
+    .hint {
+      margin: 8px 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>🎄 Новогодний кроссворд / New Year Crossword 🎄</h1>
+    <p>Заполните кроссворд, используя подсказки на русском и английском!</p>
+    <p>Fill in the crossword using clues in Russian and English!</p>
+
+    <!-- Простая сетка 7x7 -->
+    <table>
+      <tr>
+        <td><input maxlength="1"></td>
+        <td><input maxlength="1"></td>
+        <td><input maxlength="1"></td>
+        <td><input maxlength="1"></td>
+        <td class="black"></td>
+        <td class="black"></td>
+        <td class="black"></td>
+      </tr>
+      <tr>
+        <td class="black"></td>
+        <td class="black"></td>
+        <td class="black"></td>
+        <td><input maxlength="1"></td>
+        <td><input maxlength="1"></td>
+        <td><input maxlength="1"></td>
+        <td><input maxlength="1"></td>
+      </tr>
+      <tr>
+        <td><input maxlength="1"></td>
+        <td><input maxlength="1"></td>
+        <td><input maxlength="1"></td>
+        <td><input maxlength="1"></td>
+        <td class="black"></td>
+        <td class="black"></td>
+        <td><input maxlength="1"></td>
+      </tr>
+      <tr>
+        <td class="black"></td>
+        <td class="black"></td>
+        <td class="black"></td>
+        <td><input maxlength="1"></td>
+        <td><input maxlength="1"></td>
+        <td><input maxlength="1"></td>
+        <td><input maxlength="1"></td>
+      </tr>
+      <tr>
+        <td><input maxlength="1"></td>
+        <td><input maxlength="1"></td>
+        <td><input maxlength="1"></td>
+        <td><input maxlength="1"></td>
+        <td class="black"></td>
+        <td class="black"></td>
+        <td class="black"></td>
+      </tr>
+      <tr>
+        <td class="black"></td>
+        <td class="black"></td>
+        <td class="black"></td>
+        <td><input maxlength="1"></td>
+        <td><input maxlength="1"></td>
+        <td><input maxlength="1"></td>
+        <td><input maxlength="1"></td>
+      </tr>
+      <tr>
+        <td><input maxlength="1"></td>
+        <td><input maxlength="1"></td>
+        <td><input maxlength="1"></td>
+        <td><input maxlength="1"></td>
+        <td class="black"></td>
+        <td class="black"></td>
+        <td class="black"></td>
+      </tr>
+    </table>
+
+    <div class="hints">
+      <div class="hint-block">
+        <h3>🇷🇺 Подсказки (Clues)</h3>
+        <div class="hint">1. Главное украшение праздника</div>
+        <div class="hint">2. Белый покров зимой</div>
+        <div class="hint">3. Дед Мороз</div>
+        <div class="hint">4. То, что дарят под ёлку</div>
+        <div class="hint">5. Праздник 31 декабря</div>
+        <div class="hint">6. В него кладут подарки</div>
+        <div class="hint">7. Везёт сани Деда Мороза</div>
+      </div>
+
+      <div class="hint-block">
+        <h3>🇬🇧 Clues (Подсказки)</h3>
+        <div class="hint">1. Main Christmas decoration</div>
+        <div class="hint">2. White winter blanket</div>
+        <div class="hint">3. Santa Claus</div>
+        <div class="hint">4. What you get under the tree</div>
+        <div class="hint">5. Celebration on Dec 31</div>
+        <div class="hint">6. Hang it by the fireplace</div>
+        <div class="hint">7. Pulls Santa’s sleigh</div>
+      </div>
+    </div>
+
+    <p style="margin-top: 30px; font-style: italic;">
+      P.S. Это интерактивный кроссворд — вводите буквы прямо в клетки! ✨
+    </p>
+  </div>
+</body>
+</html>
