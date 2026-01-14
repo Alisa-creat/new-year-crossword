@@ -6,7 +6,11 @@
   <title>Мой блог</title>
  
  <style>
-  body {
+ @font-face {
+  font-family: 'Pudelinka';
+  src: url('Pudelinka.ttf') format('truetype');
+}
+   body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
@@ -30,10 +34,12 @@
   }
 
   h1 {
-    color: #c1272d; /* тёмно-красный или другой контрастный цвет */
-    margin-bottom: 30px;
-    text-shadow: none; /* убираем тень, она не нужна на светлом фоне */
-  }
+  font-family: 'Pudelinka', cursive;
+  font-size: 2.6em;
+  margin-bottom: 30px;
+  color: #c1272d; /* или другой цвет */
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.6);
+}
 
   .date {
     font-weight: bold;
@@ -115,6 +121,7 @@
 </body>
 
 </html>
+
 
 
 
