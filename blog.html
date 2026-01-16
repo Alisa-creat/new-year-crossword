@@ -134,9 +134,71 @@
 
     <a href="index.html" class="home-btn">🏠 На главную</a>
   </div>
+  <!-- Падающий снег -->
+<div id="snowflakes"></div>
+<style>
+  #snowflakes {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 9999;
+  }
+  .snowflake {
+    position: absolute;
+    background: white;
+    border-radius: 50%;
+    opacity: 0.8;
+    pointer-events: none;
+  }
+</style>
+<script>
+  (function() {
+    const snowContainer = document.getElementById('snowflakes');
+    const snowflakesCount = window.innerWidth < 768 ? 30 : 60; // меньше на телефонах
+
+    for (let i = 0; i < snowflakesCount; i++) {
+      const snowflake = document.createElement('div');
+      snowflake.classList.add('snowflake');
+      
+      // Случайный размер (2–6px)
+      const size = Math.random() * 4 + 2;
+      snowflake.style.width = `${size}px`;
+      snowflake.style.height = `${size}px`;
+      
+      // Начальная позиция
+      snowflake.style.left = `${Math.random() * 100}vw`;
+      snowflake.style.top = `${-size}px`;
+      
+      // Анимация
+      const duration = Math.random() * 5 + 5; // 5–10 сек
+      const delay = Math.random() * 5;
+      snowflake.style.animation = `fall ${duration}s linear ${delay}s infinite`;
+      
+      snowContainer.appendChild(snowflake);
+    }
+
+    // Добавим CSS-анимацию через JS (чтобы не трогать основной стиль)
+    if (!document.getElementById('snow-animation')) {
+      const style = document.createElement('style');
+      style.id = 'snow-animation';
+      style.textContent = `
+        @keyframes fall {
+          to {
+            transform: translateY(100vh) rotate(360deg);
+          }
+        }
+      `;
+      document.head.appendChild(style);
+    }
+  })();
+</script>
 </body>
 
 </html>
+
 
 
 
