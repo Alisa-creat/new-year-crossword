@@ -86,6 +86,9 @@
 </style>
 </head>
 <body>
+  <div style="text-align: center; margin-bottom: 20px; color: #ffd700; font-weight: bold;">
+  Сегодня: <span id="current-date"></span>
+</div>
   <div class="container">
     <h1>📖 Мой блог</h1>
 </div>
@@ -130,6 +133,24 @@
 
     Теперь я понимаю, как устроен интернет — от корня до страницы! 😊
   </div>
+    <div class="entry">
+  <div class="date">19.01.26</div>
+  <div>
+    <strong>Решите шифры Цезаря!</strong><br><br>
+
+    🔐 <em>Определите ключи шифра Цезаря, если известны пары:</em><br>
+    а. АПЕЛЬСИН → САЦЬНВЩЮ<br>
+    б. АБРИКОС → ЫЬЛГЕЙМ<br><br>
+
+    🔓 <em>Расшифруйте сообщения (ключ k, 0 &lt; k &lt; 32):</em><br>
+    а. ФХНЗКЧ<br>
+    б. ЦЩЕБФ<br><br>
+
+    ✍️ <em>Зашифруйте свою фамилию с ключом 10.</em><br><br>
+
+    <em>Ответы можно оставить в комментариях или просто поразмышлять самим 😊</em>
+  </div>
+</div>
 </div>
 
     <a href="index.html" class="home-btn">🏠 На главную</a>
@@ -195,9 +216,15 @@
     }
   })();
 </script>
+  <script>
+  const now = new Date();
+  const options = { year: 'numeric', month: 'long', day: 'numeric', weekday: 'long' };
+  document.getElementById('current-date').textContent = now.toLocaleDateString('ru-RU', options);
+</script>
 </body>
 
 </html>
+
 
 
 
